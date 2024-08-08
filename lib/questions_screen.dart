@@ -26,7 +26,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 30),
-              ...currentQuestion.answers.map((item) {
+
+              //Using the Map functionality
+              ...currentQuestion.getShuffledAnswers().map((item) {
                 return AnswerButton(answerText: item, onTap: () {});
               }),
               //   const SizedBox(height: 30),
